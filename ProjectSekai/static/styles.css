@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/image3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1.0;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5;
+    margin: 1;
+    text-align: center;
+    color: #fff;
+    font: Futura Classic W01;
+}
+
+.header {
+    background-color: rgba(97, 255, 202, 0.5);
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+.header2 {
+    background-color: rgba(237, 230, 95, 0.5);
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+.box {
+    height: auto;
+    font-weight: 500;
+    background-color: rgba(97, 255, 202, 0.2);
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    color: #000a75;
+}
+
+.box2 {
+    height: auto;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: rgba(250, 248, 127, 0.2);
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+    color: #0f0f0f;
+}
+
+.section:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+h1 {
+    font: Futura Classic W01;
+    font-size: 36px;
+}
+
+.btn {
+    transition: .5s;
+    background-color: #d9edff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font: Futura Classic W01;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+
+input[type="text"] {
+    line-height: 1.8;
+    width: 25%;
+}
+
+input[type="text"]:hover {
+    background-color: #f5f5f5;
+    font: Futura Classic W01;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e8e3e3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #ababab;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #e8dfdf;
+  opacity: 0.5;
+}

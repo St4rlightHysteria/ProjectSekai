@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log in
+{% endblock %}
+
+{% block body %}
+
+    <div class="box">
+        <form action="/add" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="title" name="title" placeholder="Task title" type="text" style="font-size: 40px;">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="desc" name="desc" placeholder="Task Description" type="text" style="height: 200px;">
+            </div>
+            <label for="date">Deadline date:</label><br>
+              <input type="date" id="date" name="date"><br>
+            <label for="time">Deadline time:</label><br>
+              <input type="time" id="time" name="time"><br>
+            <button class="btn" type="submit">Add task</button>
+        </form>
+    </div>
+
+{% endblock %}
