@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Notifications
+{% endblock %}
+
+{% block body %}
+    <br>
+    <h1>Configure Notifications</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the browser supports notifications
+            if ('Notification' in window) {
+                // Request permission for notifications
+                Notification.requestPermission().then(function (permission) {
+                    if (permission === 'granted') {
+                        // Permission granted
+                        console.log('Notification permission granted');
+                    } else {
+                        console.warn('Notification permission denied');
+                    }
+                });
+            }
+        });
+    </script>
+
+    {% if tasks %}
+        {% for task in tasks %}
+            <div class="box">
+                <a href="{{ url_for('task_nft', task_number=task[1]) }}">
+                    <h3>{{ task[2] }}</h3>
+                    <p>Deadline: {{ task[5] }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="box">No tasks found.</div>
+    {% endif %}
+{% endblock %}
