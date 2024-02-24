@@ -1,0 +1,217 @@
+/* This applies to all scrollable elements */
+::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the tracking area */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scroll thumb */
+    border-radius: 5px; /* roundness of the scroll thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scroll thumb on hover */
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/image3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1.0;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5;
+    margin: 1;
+    text-align: center;
+    color: #fff;
+    font: Roboto Condensed Bold;
+}
+
+* {box-sizing:border-box}
+
+/* Container for exp bars */
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.bar {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white; /* probably won't write anything inside the bar but you never know */
+}
+
+.lvl {
+  background-color: #91242c;
+}
+
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fafafa;
+    font-size: 16px;
+    resize: none;
+}
+
+
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+.box {
+    max-width: 80%;
+    height: 300px; /* Set a fixed height for the box */
+    overflow-y: auto; /* Adds a vertical scrollbar when content overflows */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    font-weight: 500;
+    background-color: rgba(46, 39, 41, 0.9);
+    margin: auto;
+    padding: 20px;
+    display: inline-block;
+    color: #850b13;
+    word-wrap: break-word; /* Wrap long words */
+}
+
+.box2 {
+    max-width: 80%;
+    height: auto; /* Set a fixed height for the box */
+    overflow-y: auto; /* Adds a vertical scrollbar when content overflows */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    font-weight: 500;
+    background-color: rgba(201, 200, 197, 0.5);
+    margin: auto;
+    padding: 20px;
+    display: inline-block;
+    color: #000a75;
+    word-wrap: break-word; /* Wrap long words */
+}
+
+
+.section:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+/* Style for labels */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: white;
+}
+
+/* Style for input fields */
+input[type="date"],
+input[type="time"] {
+    width: 250px;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #d1c5c8;
+    background-color: #fafafa;
+}
+
+input[type="date"]:hover,
+input[type="date"]:focus,
+input[type="time"]:hover,
+input[type="time"]:focus {
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.btn {
+    transition: .5s;
+    background-color: #d9edff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+
+input[type="text"] {
+    line-height: auto;
+    width: auto;
+    background-color: #fafafa
+}
+
+input[type="text"]:hover {
+    background-color: #f5f5f5;
+    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.box label {
+    display: block;
+    margin-bottom: 5px; /* Space between labels */
+    font-size: 16px;
+    color: #333; /* Label text color */
+}
+
+
+.box input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Space between input fields */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2b2b2a;
+}
+
+li {
+  float: left;
+}
+
+a {
+  color: #d62727;
+}
+
+a:hover {
+    color: #fa3737;
+}
+
+
+li a {
+  display: block;
+  color: #ababab;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #635959;
+  opacity: 0.5;
+}

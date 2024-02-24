@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Verify Email
+{% endblock %}
+
+{% block body %}
+
+<br>
+<h2>Verify the mail you set first</h2>
+
+{% if verified %}
+
+<div class="box">
+    <h3 style="color: #3da14c">Your mail is verified. You can now get mail notifications</h3>
+</div>
+
+{% else %}
+<div class="box">
+    <h3>Your mail: {{ user_email }}</h3>
+    <br>
+    <form action="/send_token" method="post">
+        <button type="submit" class="btn" id="SendToken" onclick="startCooldown(this)">Send Token</button>
+    </form>
+    <br>
+    <p id="TokenSent" style="color: #3da14c"></p>
+    <form action="/verify_email" method="post">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="token" name="token" placeholder="Token" type="text">
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    <br>
+    <p id="InvalidToken" style="color: #ad0a0a"></p>
+</div>
+
+<script src="{{ url_for('static', filename='token.js') }}"></script>
+
+{% endif %}
+
+{% endblock %}

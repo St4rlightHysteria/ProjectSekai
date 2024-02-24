@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log in
+{% endblock %}
+
+{% block body %}
+
+    <div class="box" style="height: 225%; overflow-y: auto; overflow-x: hidden;">
+        <form action="/add" method="post" onsubmit="return validateForm()">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="title" name="title" placeholder="Task title" type="text" style="font-size: 40px;" maxlength="50">
+                <p id="titleError" style="color: red;"></p>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control mx-auto w-auto" id="desc" name="desc" placeholder="Task Description" style="height: 125px; margin: 10px; white-space: pre-wrap;" maxlength="500"></textarea>
+                <p id="descError" style="color: red;"></p>
+            </div>
+            <label for="date">Deadline date:</label><br>
+            <input type="date" id="date" name="date">
+            <p id="dateError" style="color: red;"></p>
+            <label for="time">Deadline time:</label><br>
+            <input type="time" id="time" name="time">
+            <p id="timeError" style="color: red;"></p>
+            <br>
+            <button class="btn" type="submit">Add task</button>
+        </form>
+
+        <script src="{{ url_for('static', filename='addTask.js') }}"></script>
+    </div>
+
+{% endblock %}

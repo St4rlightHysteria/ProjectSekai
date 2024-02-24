@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+
+    <div class="box" style="width: 600px">
+        <form action="/register" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username (max 20 chars)" type="text" maxlength="20">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm password" type="password">
+            </div>
+            <button class="btn" type="submit">Register</button>
+        </form>
+        <br>
+        <h3 id="error" style="color: #ad0a0a"></h3>
+    </div>
+
+    <div class="box">
+        <h1>Password requirements:</h1>
+        <ul>
+            <li><div class="box2">Must have from 8 to 32 characters</div></li>
+            <li><div class="box2">Must have alphabetic letters, numbers and special symbols</div></li>
+        </ul>
+    </div>
+
+    {% if notAllFields %}
+        <script src="{{ url_for('static', filename='Register_notAllFields.js') }}"></script>
+    {% elif diffPasswords %}
+        <script src="{{ url_for('static', filename='Register_diffPasswords.js') }}"></script>
+    {% elif noRequirements %}
+        <script src="{{ url_for('static', filename='Register_noRequirements.js') }} "></script>
+    {% elif userExists %}
+        <script src="{{ url_for('static', filename='Register_userExists.js') }}"></script>
+    {% endif %}
+
+{% endblock %}

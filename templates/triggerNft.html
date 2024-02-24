@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Set Emails
+{% endblock %}
+
+{% block body %}
+    <br>
+    <h1>Turn Emails on</h1>
+    <div id="tasks-container">
+        {% if tasks %}
+            {% for task in tasks %}
+                <div class="box" style="height: 250px">
+                    <h3>{{ task[2] }}</h3>
+                    <p>Deadline: {{ task[5] }}</p>
+                    <form action="/toggle_on_task_notifications/{{ task[1] }}" method="post">
+                        <button class="btn" type="submit" onclick="emailOn()">Set email(s) on</button>
+                    </form>
+
+                    <br>
+
+                    <form action="/toggle_off_notifications/{{ task[1] }}" method="post">
+                        <button class="btn" type="submit" onclick="emailOff()">Set email(s) off</button>
+                    </form>
+                    <p id="EmailOn" style="color: #318c2a"></p>
+                    <p id="EmailOff" style="color: #ad0a0a"></p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="box">No tasks found.</div>
+        {% endif %}
+    </div>
+
+    <script>
+        function emailOn() {
+            document.getElementById("EmailOn").innerText = "Mail notifications on";
+            document.getElementById("EmailOff").innerText = "";
+        }
+
+        function emailOff() {
+            document.getElementById("EmailOn").innerText = "";
+            document.getElementById("EmailOff").innerText = "Mail notifications off";
+        }
+    </script>
+
+{% endblock %}

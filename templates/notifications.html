@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Task Notifications
+{% endblock %}
+
+{% block body %}
+
+<br>
+<h1>Task Notifications</h1>
+
+<div class="box" style="height: 500px">
+    <h1>{{ task[2] }}</h1>
+    <h4>Deadline: {{ task[5] }}</h4>
+
+    <br>
+
+    <form action="{{ url_for('save_reminders', task_number=task[1]) }}" method="POST">
+        {% for i in range(5) %}
+        <label for="reminder{{ i+1 }}" style="color: #c4bcbc;">Reminder {{ i+1 }}:</label>
+        <input type="datetime-local" id="reminder{{ i+1 }}" name="reminder{{ i+1 }}" value="{{ reminders[i] if i < reminders|length else '' }}">
+        <br>
+        {% endfor %}
+        <br>
+        <button class="btn" type="submit" onclick="remindersSaved()">Save Reminders</button>
+    </form>
+    <br>
+    <p id="saved" style="color: #3da14c"></p>
+</div>
+
+<script src="{{ url_for('static', filename='remindersSaved.js') }}"></script>
+
+{% endblock %}

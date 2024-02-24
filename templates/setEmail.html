@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Set Email
+{% endblock %}
+
+{% block body %}
+
+<br>
+<h2>Set/change the mail where you want to get task reminders in</h2>
+
+<div class="box" style="height: 200px">
+
+    <form id="emailForm" action="/set_email" method="post">
+        <input id="email" name="email" autocomplete="off" autofocus class="form-control mx-auto w-auto" placeholder="E-mail">
+        <button type="button" id="submitBtn" class="btn">Submit</button>
+    </form>
+    <br>
+    <p id="valid" style="color: #318c2a"></p>
+    <p id="invalid" style="color: #ad0a0a"></p>
+
+</div>
+
+<script src="{{ url_for('static', filename='checkEmail.js') }}"></script>
+
+{% endblock %}
