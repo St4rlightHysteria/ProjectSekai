@@ -5,6 +5,8 @@
 # Overall description:
 **A Haxxor Bunny (from Honkai Impact 3rd) themed Task Manager web application scripted with Python and its Flask framework, HTML (Jinja2 included), a little JavaScript, CSS and SQL.**
 
+![haxxor bunny](https://i.ytimg.com/vi/1UE_CWP6lo0/maxresdefault.jpg)
+
 - Register/Log In
 - Set Timezone (so that everything can be converted in UTC inside the SQL database)
 - Add/Delete task
